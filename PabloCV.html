@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Gómez Pérez - Lebenslauf</title>
+    <style>
+        /* Modern CV styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .contact-info div {
+            display: flex;
+            align-items: center;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .job-company {
+            font-weight: bold;
+        }
+        .job-period {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .job-description {
+            margin-top: 8px;
+        }
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        .skill-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-item {
+            background-color: #e7f2fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .education-item {
+            margin-bottom: 15px;
+        }
+        .education-degree {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .education-institution {
+            font-weight: bold;
+        }
+        .education-period {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .personal-info {
+            display: grid;
+            grid-template-columns: max-content auto;
+            gap: 10px 20px;
+            margin-bottom: 20px;
+        }
+        .personal-info-label {
+            font-weight: bold;
+        }
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pablo Gómez Pérez</h1>
+        <div class="contact-info">
+            <div>📧 email@example.com</div>
+            <div>📱 +49 123 456 7890</div>
+            <div>🌐 linkedin.com/in/pablo-gomez-perez</div>
+            <div>📍 Berlin, Deutschland</div>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Persönliche Daten</h2>
+        <div class="personal-info">
+            <div class="personal-info-label">Geburtsdatum:</div>
+            <div>01.01.1990</div>
+            <div class="personal-info-label">Geburtsort:</div>
+            <div>Madrid, Spanien</div>
+            <div class="personal-info-label">Staatsangehörigkeit:</div>
+            <div>Spanisch</div>
+            <div class="personal-info-label">Familienstand:</div>
+            <div>Ledig</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Profil</h2>
+        <p>
+            Erfahrener Fachmann mit Expertise in [Ihr Fachgebiet]. Detailorientiert und ergebnisorientiert mit nachgewiesener Erfolgsbilanz in [Schlüsselerfolg]. Kompetent in [Kernkompetenzen] mit Schwerpunkt auf [Spezialisierung].
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Berufserfahrung</h2>
+        
+        <div class="job">
+            <div class="job-title">Leitende Position</div>
+            <div class="job-company">Firmenname GmbH</div>
+            <div class="job-period">Januar 2020 - Heute</div>
+            <div class="job-description">
+                <ul>
+                    <li>Führung eines Teams von X Fachleuten bei der Entwicklung und Umsetzung der Y-Strategie</li>
+                    <li>Steigerung des Unternehmensumsatzes um Z% durch innovative Herangehensweise an [Bereich]</li>
+                    <li>Zusammenarbeit mit funktionsübergreifenden Teams, um Projekte termingerecht und innerhalb des Budgets zu liefern</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Vorherige Position</div>
+            <div class="job-company">Vorheriges Unternehmen AG</div>
+            <div class="job-period">März 2015 - Dezember 2019</div>
+            <div class="job-description">
+                <ul>
+                    <li>Verantwortlich für die Verwaltung und Koordination wichtiger Projekte</li>
+                    <li>Entwicklung und Implementierung neuer Prozesse, die die Effizienz um X% verbessert haben</li>
+                    <li>Zusammenarbeit mit internationalen Teams über mehrere Zeitzonen hinweg</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Fähigkeiten</h2>
+        
+        <div class="skill-category">
+            <div class="skill-title">Fachkenntnisse</div>
+            <div class="skills-list">
+                <div class="skill-item">Fähigkeit 1</div>
+                <div class="skill-item">Fähigkeit 2</div>
+                <div class="skill-item">Fähigkeit 3</div>
+                <div class="skill-item">Fähigkeit 4</div>
+                <div class="skill-item">Fähigkeit 5</div>
+            </div>
+        </div>
+        
+        <div class="skill-category">
+            <div class="skill-title">Sprachen</div>
+            <div class="skills-list">
+                <div class="skill-item">Englisch (Fließend)</div>
+                <div class="skill-item">Deutsch (Fortgeschritten)</div>
+                <div class="skill-item">Spanisch (Muttersprache)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Ausbildung</h2>
+        
+        <div class="education-item">
+            <div class="education-degree">Master in [Fachbereich]</div>
+            <div class="education-institution">Universität Name</div>
+            <div class="education-period">2012 - 2014</div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-degree">Bachelor in [Fachbereich]</div>
+            <div class="education-institution">Universität Name</div>
+            <div class="education-period">2008 - 2012</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Zertifizierungen</h2>
+        <ul>
+            <li>Zertifizierung 1 (Jahr)</li>
+            <li>Zertifizierung 2 (Jahr)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Interessen & Hobbys</h2>
+        <p>
+            [Ihre Interessen und Hobbys hier einfügen]
+        </p>
+    </section>
+
+    <footer style="margin-top: 30px; text-align: right; font-style: italic; color: #7f8c8d;">
+        <p>Berlin, den [aktuelles Datum]</p>
+    </footer>
+</body>
+</html> 
