@@ -213,8 +213,7 @@
         <h2>Contact Me</h2>
         <p>Interested in discussing professional opportunities? Please fill out the form below, and I'll get back to you promptly.</p>
         
-        <form id="contact-form" action="https://formspree.io/f/xbjbyvqz" method="POST">
-            <input type="hidden" name="_next" value="https://pgpgpgp.github.io/pablogomezperez-curriculum/">
+        <form id="fs-frm" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqkvvrql" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -235,6 +234,8 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             
+            <input type="hidden" name="_subject" value="New contact from website">
+            <input type="hidden" name="_next" value="https://pgpgpgp.github.io/pablogomezperez-curriculum/">
             <button type="submit" class="btn btn-submit">Send Message</button>
         </form>
     </section>
