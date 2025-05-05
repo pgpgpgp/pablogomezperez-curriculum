@@ -1,21 +1,28 @@
 import sys
 import os
+import subprocess
+
+# Fix for linting errors - we'll handle the import differently
+# First check if PyPDF2 is installed
 try:
-    import PyPDF2
+    import PyPDF2  # type: ignore
 except ImportError:
     print("PyPDF2 not found. Installing...")
-    os.system("pip install PyPDF2")
     try:
-        import PyPDF2
-    except ImportError:
-        print("Failed to install PyPDF2. Please install it manually with 'pip install PyPDF2'.")
+        # More reliable than os.system
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "PyPDF2"])
+        import PyPDF2  # type: ignore
+    except (subprocess.CalledProcessError, ImportError):
+        print("Failed to install PyPDF2. Please install it manually with:")
+        print("    pip install PyPDF2")
         sys.exit(1)
 
 def extract_text_from_pdf(pdf_path):
     """Extract text from a PDF file."""
     try:
         with open(pdf_path, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
+            # Using PyPDF2.PdfReader even if linter doesn't recognize it
+            reader = PyPDF2.PdfReader(file)  # type: ignore
             text = ""
             for page_num in range(len(reader.pages)):
                 try:
