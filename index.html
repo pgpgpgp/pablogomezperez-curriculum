@@ -82,6 +82,84 @@
             line-height: 1.8;
             margin-bottom: 0;
         }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-download {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .btn-download:hover {
+            background-color: #27ae60;
+        }
+        .contact-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .btn-submit {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+        .main-nav {
+            background-color: #2c3e50;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .main-nav ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin: 0;
+        }
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            transition: background-color 0.3s;
+        }
+        .main-nav a:hover {
+            background-color: #3498db;
+        }
     </style>
 </head>
 <body>
@@ -90,33 +168,78 @@
         <p>Mechatronics Technician & Industrial Electrician</p>
     </header>
 
-    <section class="bio-section">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#resume">Resumes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="bio-section" id="bio">
         <h2>Bio</h2>
         <p>Versatile Mechatronics Technician and Industrial Electrician with extensive experience in automation systems maintenance and industrial equipment troubleshooting. Combining hands-on expertise in electrical installations with strong mechanical aptitude to deliver comprehensive solutions for complex industrial challenges. Specializing in preventive maintenance implementation that reduces downtime and extends equipment lifespan. Recognized for quickly diagnosing and resolving critical system failures while maintaining production schedules. Committed to continuous learning and applying the latest technological advancements to improve operational efficiency and safety standards.</p>
     </section>
 
-    <h2>Resume Versions</h2>
+    <h2 id="resume">Resume Versions</h2>
     <div class="container">
         <div class="card">
             <h3>English Resume</h3>
             <p>Professional resume in English highlighting experience in industrial automation, electrical system maintenance, and technical troubleshooting.</p>
-            <a href="Pablo Gomez Perez - Resume English.html" class="btn">View English Resume</a>
+            <div class="button-group">
+                <a href="Pablo Gomez Perez - Resume English.html" class="btn">View Resume</a>
+                <a href="assets/Pablo_Gomez_Perez_Resume_EN.pdf" class="btn btn-download" download>Download PDF</a>
+            </div>
         </div>
         <div class="card">
             <h3>Spanish Resume</h3>
             <p>Currículum profesional en español que destaca la experiencia en automatización industrial, mantenimiento de sistemas eléctricos y resolución de problemas técnicos.</p>
-            <a href="Pablo Gomez Perez - Curriculum Vitae Español.html" class="btn">Ver Currículum en Español</a>
+            <div class="button-group">
+                <a href="Pablo Gomez Perez - Curriculum Vitae Español.html" class="btn">Ver Currículum</a>
+                <a href="assets/Pablo_Gomez_Perez_Resume_ES.pdf" class="btn btn-download" download>Descargar PDF</a>
+            </div>
         </div>
         <div class="card">
             <h3>German Resume</h3>
             <p>Professioneller Lebenslauf auf Deutsch, der Erfahrung in industrieller Automatisierung, Wartung elektrischer Systeme und technischer Fehlerbehebung hervorhebt.</p>
-            <a href="Pablo Gomez Perez - Lebenslauf.html" class="btn">Lebenslauf anzeigen</a>
+            <div class="button-group">
+                <a href="Pablo Gomez Perez - Lebenslauf.html" class="btn">Lebenslauf anzeigen</a>
+                <a href="assets/Pablo_Gomez_Perez_Resume_DE.pdf" class="btn btn-download" download>PDF herunterladen</a>
+            </div>
         </div>
     </div>
 
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <p>Interested in discussing professional opportunities? Please fill out the form below, and I'll get back to you promptly.</p>
+        
+        <form id="contact-form" action="https://formspree.io/f/xbjbyvqz" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-submit">Send Message</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2023 Pablo Gómez Pérez. All rights reserved.</p>
-        <p>Contact: pablogomezperez1@gmail.com | +49 1577/1497387</p>
     </footer>
 </body>
 </html> 
