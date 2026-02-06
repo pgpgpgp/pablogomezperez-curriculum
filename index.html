@@ -1,24 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pablo Gomez Perez — Resume</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width:800px; margin:40px auto; padding:0 20px; color:#222; }
-    h1 { text-align:center; }
-    ul { margin-top: 30px; }
-    a.button { display:inline-block; padding:10px 16px; margin:8px 0; background:#0b74de; color:#fff; text-decoration:none; border-radius:4px; }
-    a.button.secondary { background:#6c757d; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Gomez Perez - Resume Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f7f7f7;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            flex: 1;
+            min-width: 280px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .bio-section {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .bio-section p {
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-download {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .btn-download:hover {
+            background-color: #27ae60;
+        }
+        .contact-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        .contact-info {
+            margin: 25px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .btn-submit {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        .btn-submit:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        .email-icon {
+            font-style: normal;
+            margin-right: 8px;
+        }
+        .main-nav {
+            background-color: #2c3e50;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .main-nav ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin: 0;
+        }
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            transition: background-color 0.3s;
+        }
+        .main-nav a:hover {
+            background-color: #3498db;
+        }
+    </style>
 </head>
 <body>
-  <h1>Pablo Gomez Perez</h1>
-  <p>Resume & downloadable PDF</p>
-  <ul>
-    <li><a class="button" href="./Pablo%20Gomez%20Perez%20-%20Resume%20English.html">Open English resume (HTML)</a></li>
-    <li><a class="button secondary" href="./assets/Pablo%20Gomez%20Perez%20-%20Resume.pdf" download>Download PDF resume</a></li>
-  </ul>
-  <p>If you want a different layout or additional links (e.g., German resume), tell me and I’ll update it.</p>
+    <header>
+        <h1>Pablo Gómez Pérez</h1>
+        <p>Mechatronics Technician & Industrial Electrician</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#resume">Resumes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="bio-section" id="bio">
+        <h2>Bio</h2>
+        <p>Versatile Mechatronics Technician and Industrial Electrician with extensive experience in automation systems maintenance and industrial equipment troubleshooting. Combining hands-on expertise in electrical installations with strong mechanical aptitude to deliver comprehensive solutions for complex industrial challenges. Specializing in preventive maintenance implementation that reduces downtime and extends equipment lifespan. Recognized for quickly diagnosing and resolving critical system failures while maintaining production schedules. Committed to continuous learning and applying the latest technological advancements to improve operational efficiency and safety standards.</p>
+    </section>
+
+    <h2 id="resume">Resume Versions</h2>
+    <div class="container">
+        <div class="card">
+            <h3>English Resume</h3>
+            <p>Professional resume in English highlighting experience in industrial automation, electrical system maintenance, and technical troubleshooting.</p>
+            <div class="button-group">
+                <a href="/Pablo Gomez Perez - Resume English.html" class="btn">View Resume</a>
+                <a href="assets/Pablo Gomez Perez - Resume.pdf" class="btn btn-download" download>Download PDF</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Spanish Resume</h3>
+            <p>Currículum profesional en español que destaca la experiencia en automatización industrial, mantenimiento de sistemas eléctricos y resolución de problemas técnicos.</p>
+            <div class="button-group">
+                <a href="Pablo Gomez Perez - Curriculum Vitae Español.html" class="btn">Ver Currículum</a>
+                <a href="assets/Pablo_Gomez_Perez_Resume_ES.pdf" class="btn btn-download" download>Descargar PDF</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>German Resume</h3>
+            <p>Professioneller Lebenslauf auf Deutsch, der Erfahrung in industrieller Automatisierung, Wartung elektrischer Systeme und technischer Fehlerbehebung hervorhebt.</p>
+            <div class="button-group">
+                <a href="Pablo Gomez Perez - Lebenslauf.html" class="btn">Lebenslauf anzeigen</a>
+                <a href="assets/Pablo_Gomez_Perez_Resume_DE.pdf" class="btn btn-download" download>PDF herunterladen</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <p>Interested in discussing professional opportunities? Please reach out via email:</p>
+        
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:pablogomezperez1@gmail.com">pablogomezperez1@gmail.com</a></p>
+            <p><strong>Phone:</strong> +49 176/45342708</p>
+            <a href="mailto:pablogomezperez1@gmail.com" class="btn btn-submit" style="color: white !important; font-weight: bold;">
+                <i class="email-icon">✉</i> Send Email
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pablo Gómez Pérez. All rights reserved.</p>
+    </footer>
 </body>
 </html>
