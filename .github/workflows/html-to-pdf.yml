@@ -1,5 +1,6 @@
 name: HTML to PDF Conversion
-yaml permissions: contents: write
+permissions:
+  contents: write
 on:
   push:
     paths:
