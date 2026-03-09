@@ -1,0 +1,37 @@
+ .github/workflows/html-to-pdf.yml
+on:
+  push:
+    paths:
+      - '**/*.html'
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Install wkhtmltopdf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf xvfb
+      
+      - name: Convert HTML files to PDF
+        run: |
+          # Convert German resume
+          xvfb-run -a wkhtmltopdf "Pablo Gomez Perez - Lebenslauf.html" "Pablo_Gomez_Perez_Resume_DE.pdf"
+          
+          # Convert Spanish resume
+          xvfb-run -a wkhtmltopdf "Pablo Gomez Perez - Curriculum Vitae Español.html" "Pablo_Gomez_Perez_Resume_ES.pdf"
+          
+          # Convert English resume
+          xvfb-run -a wkhtmltopdf "Pablo Gomez Perez - Resume English.html" "Pablo_Gomez_Perez_Resume_EN.pdf"
+      
+      - name: Commit and push PDF updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.pdf
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update PDFs from latest HTML files" && git push)
